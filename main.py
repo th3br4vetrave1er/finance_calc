@@ -36,6 +36,7 @@ def main() -> None:
             monthly_income: float = float(input('Enter your monthly salary: '))
             tax_rate: float = float(input('Enter your tax rate(%): '))
             currency: str = input('What currency?(symbols): ')
+            break
         except ValueError:
             print('Try using correct input formats!')
 
