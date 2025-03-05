@@ -31,9 +31,13 @@ def calculate_finances(monthly_income: float, tax_rate: float, currency: str) ->
 
 
 def main() -> None:
-    monthly_income: float = float(input('Enter your montly salary: '))
-    tax_rate: float = float(input('Enter your tax rate(%): '))
-    currency: str = input('What currency?(symbols): ')
+    while True:
+        try:
+            monthly_income: float = float(input('Enter your monthly salary: '))
+            tax_rate: float = float(input('Enter your tax rate(%): '))
+            currency: str = input('What currency?(symbols): ')
+        except ValueError:
+            print('Try using correct input formats!')
 
     calculate_finances(
         monthly_income=monthly_income, tax_rate=tax_rate, currency=currency
